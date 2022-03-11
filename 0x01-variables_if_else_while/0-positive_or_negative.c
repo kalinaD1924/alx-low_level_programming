@@ -1,17 +1,31 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 
-	// This program will create same sequence of random numbers on every program run
-
+/**
+ * main - Prints if number is positive, zero or negative
+ *
+ * Return: Always (Success)
+ */
 int main(void)
 {
 	int n;
 
-	strand(time(0))
-		n = rand() - RANDMAX / 2; 
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 
-	for(int i = 0; i<5; i++)
-		printf(" %d ", rand());
+	if (n > 0)
+	{
+		printf("%d is positive\n", n);
+	}
+	else if (n == 0)
+	{
+		printf("%d is zero\n", n);
+	}
+	else
+	{
+		printf("%d is negative\n", n);
+	}
 
-	return 0;
+	return (0);
 }
