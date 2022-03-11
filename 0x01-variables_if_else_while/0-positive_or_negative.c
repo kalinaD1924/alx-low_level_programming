@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 	// This program will create same sequence of
 	// random numbers on every program run
