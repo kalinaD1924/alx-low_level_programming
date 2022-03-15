@@ -6,13 +6,13 @@
  **/
 int main(void)
 {
-	char kalina[] = "_putchar";
+
 
 	int c;
-
+        char c;
 	for (c = 0; c < 8; c++)
 	{
-		_putchar(kalina[c]);
+		_putchar(c);
 	}
 	_putchar('\n');
 	return (0);
