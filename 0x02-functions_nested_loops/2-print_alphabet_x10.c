@@ -1,9 +1,17 @@
-#include "main.h"
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+#include <main.h>
+
 /**
  * print_alhpabet_x10 - repeats the print_alphabet 10 times.
- * Return: Nothing.
+ * Return: Always 0.
  */
-void print_alphabet_x10
+void
+{
+	print_alphabet_x10(void);
+	return (0);
+}
 { 
 	int i;
 	char c;
