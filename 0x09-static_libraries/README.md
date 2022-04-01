@@ -1,2 +1,2 @@
-# ALX static lib
+ ALX static lib
 # C - Static libraries
