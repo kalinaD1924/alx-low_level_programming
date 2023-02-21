@@ -1,46 +1,48 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
-  * print_times_table - Prints a multiplication table up to param
-  * @n: The number to be treated
-  *
-  * Return: Number matrix
-  */
+ * print_times_table - prints the times table
+ * @n: takes in an integer
+ */
 void print_times_table(int n)
 {
-	int x, y, z;
+	int i, j, k;
 
-	if (n >= 0 && n <= 14)
+	if (n > 15 || n < 0)
+		return;
+	for (i = 0; i <= n; i++)
 	{
-		for (x = 0; x <= n; x++)
+		for (j = 0; j <= n; j++)
 		{
-			for (y = 0; y <= n; y++)
+			k = i * j;
+			if (j == 0)
 			{
-				z = x * y;
-				if (z > 99)
-				{
-					_putchar(',');
-					_putchar(32);
-					_putchar((z / 100) + '0');
-					_putchar(((z / 10) % 10) + '0');
-					_putchar((z % 10) + '0');
-				}
-				else if (z > 9)
-				{
-					_putchar(',');
-					_putchar(32);
-					_putchar(32);
-					_putchar(((z / 10) % 10) + '0');
-					_putchar((z % 10) + '0');
-				}
-				else
-				{
-					if (y != 0)
-					{
-						_putchar(',');
-						_putchar(32);
-						_putchar(32);
-						_putchar(32);
-					}
-					_putchar(z + '0');
-				}
+				_putchar(k + '0');
+			}
+			else if (k <= 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(k + '0');
+			}
+			else if (k >= 10 && k < 100)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(k / 10 + '0');
+				_putchar(k % 10 + '0');
+			}
+			else
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((k / 100) + '0');
+				_putchar(k / 10 % 10 + '0');
+				_putchar(k % 10 + '0');
+			}
+		}
+		_putchar('\n');
+	}
+}
